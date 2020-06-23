@@ -1,0 +1,17 @@
+excel.open
+excel.addsheet ‴New Sheet‴
+excel.setvalue ‴some entry‴ row 1 colindex 1                  // TO SET A VALUE IN A CELL OF AN EXCEL SHEET
+excel.addsheet ‴Another Sheet‴                                // TO ADD A NEW SHEET TO A EXCEL FILE
+excel.setvalue 132 row 1 colname ‴A‴
+excel.activatesheet ‴New Sheet‴                               // TO ACTIVATE A EXCEL SHEET
+excel.selectrange colname1 A row1 1 colname2 A row2 2         // TO SELECT A RANGE IN A EXCEL SHEET
+excel.copy                                                    // TO COPY A VALUE OR RANGE OF VALUE FROM A EXCEL SHEET TO THE CLIPBOARD
+excel.selectrange colname1 B row1 2 colname2 B row2 3
+excel.paste                                                    // TO PASTE A VALUE OR RANGE OF VALUE FROM CLIPBOARD TO ANOTHER CELL OR RANGE OF CELL
+
+
+♥sourceFile = ♥environment⟦USERPROFILE⟧\DESKTOP\test.docx
+♥toInsert = ‴I hate yogurt. It's just stuff with bits in. All I've got to do is pass as an ordinary human being. Simple. What could possibly go wrong? Saving the world with meals on wheels. I'm the Doctor, I'm worse than everyone's aunt. **catches himself** And that is not how I'm introducing myself.‴
+word.open ♥sourceFile                                           // TO OPEN A EXISTING WORD FILE
+word.inserttext ♥toInsert replacealltext true                   // TO INSERT THE TEXT SAVED IN THE toinsert VARIABLE
+word.replace Saving to Killing wholewords true                  // TO REPLACE THE WORD Saving TO Killing
