@@ -1,0 +1,37 @@
+addon ocrgoogle version 4.103.0.0
+addon core version 4.107.0.0
+addon language version 4.106.1.0
+
+// Login into google cloud services
+♥googleLogin = AIzaSyDrfFYcUi6NqKK6xlTBRyS0M5PStVHMiQA
+chrome duckduckgo.com
+ocrgoogle.login chrome apikey ♥googleLogin
+ocrgoogle.find duckduckgo
+dialog ♥result
+
+// Use of ocrgoogle.find command
+♥googleLogin = AIzaSyDrfFYcUi6NqKK6xlTBRyS0M5PStVHMiQA
+ocrgoogle.login chrome apikey ♥googleLogin
+program notepad
+keyboard ⋘ENTER⋙‴   TEST    ‴
+delay 1
+ocrgoogle.find search test
+dialog ♥result
+
+// Use of ocrgoogle.findpoint command
+♥googleLogin = AIzaSyDrfFYcUi6NqKK6xlTBRyS0M5PStVHMiQA
+chrome http://digitalnativestudios.com/textmeshpro/docs/rich-text/lowercase-uppercase-smallcaps.png
+window ✱Chrome✱ style maximize
+delay milliseconds 200
+ocrgoogle.login chrome apikey ♥googleLogin
+ocrgoogle.findpoint alice
+dialog ♥result
+
+// Use of ocrgoogle.fromscreen command
+♥googleLogin = AIzaSyDrfFYcUi6NqKK6xlTBRyS0M5PStVHMiQA
+chrome http://digitalnativestudios.com/textmeshpro/docs/rich-text/lowercase-uppercase-smallcaps.png
+window ✱Chrome✱ style maximize
+delay milliseconds 200
+ocrgoogle.login chrome apikey ♥googleLogin
+ocrgoogle.fromscreen area 338⫽298⫽1569⫽849
+dialog ♥result
