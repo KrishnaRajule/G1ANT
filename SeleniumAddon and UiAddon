@@ -1,0 +1,50 @@
+addon selenium version 4.104.0.0
+addon ui version 4.104.0.0
+addon core version 4.107.0.0
+addon language version 4.106.1.0
+
+// To use .click command to click on elements of web
+selenium.open chrome url https://www.cia.gov/library/publications/the-world-factbook/geos/dj.html
+window ✱✱ style maximize
+selenium.click search btn-print by class
+keyboard ⋘CTRL+P⋙
+keyboard ⋘ENTER⋙
+
+// To use .activetab to switch between tabs
+selenium.open chrome url g1ant.com
+delay 4
+selenium.newtab facebook.com
+delay 4
+selenium.newtab google.com
+dialog ‴Now let's go back to the first tab‴
+delay 4
+selenium.activatetab search g1ant by url
+
+// To use .runscript command to run a Java Script code
+selenium.open chrome url google.com
+selenium.runscript ‴return document.querySelector("body").tagName‴
+dialog ♥result
+
+
+// To use .click command to click on the elements of the windows
+program notepad
+ui.click ‴/ui[@name='Untitled - Notepad']/descendant::ui[@name='Close']‴
+
+// To use .getrectangle to get the coordinates of the window title bar
+program notepad
+ui.getrectangle ‴/ui[@name='Untitled - Notepad']‴
+dialog ♥result
+
+// To use .setfocus to set focus or activate a different window
+program notepad
+program calc
+delay 2
+ui.setfocus ‴/ui[@name='Untitled - Notepad']‴
+keyboard ⋘ALT+F4⋙
+
+// To use .setroot to set a root wpath for the following commands
+program notepad
+ui.setroot wpath ‴/ui[@name='Untitled - Notepad']‴
+ui.click ‴/ui[@id='MenuBar']/ui[@name='File']‴
+delay 2
+ui.click wpath ‴/descendant::ui[@name='Close']‴
