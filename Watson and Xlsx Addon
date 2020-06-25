@@ -1,0 +1,35 @@
+addon watson version 4.103.0.0
+addon xlsx version 4.104.0.0
+addon core version 4.107.0.0
+addon language version 4.106.1.0
+
+// To classfiy a image using the .classifyimage command
+♥apiKey = dlksdfanfl34534nk4954nefnask8f-ee
+♥serverUri = https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?version=2018-03-19
+watson.classifyimage C:\Users\Krishna\Desktop\ss.jpg apikey ♥apiKey serveruri ♥serverUri
+dialog ♥result
+
+// To convert the audio file into a text format using .speechtotext command
+♥apiKey = 8efhqeiqe94iqenqnc03e9nfqweofiqf0
+♥serverUri = https://gateway-lon.watsonplatform.net/speech-to-text/api
+watson.speechtotext C:\Users\Krishna\Desktop\speech.mp3 apikey ♥apiKey serveruri ♥serverUri
+dialog ♥result
+
+
+// To open a file which is already created and saved in some directory usinf .open command 
+xlsx.open C:\Users\Krishna\Desktop\Test.xlsx accessmode read createifnotexist true result ♥excelId1
+
+// To count the number of rows that are used in the sheet using .countrows command
+xlsx.countrows
+dialog ♥result
+
+// To find a value and get the cell coordinates in return using the .find command
+xlsx.open C:\Users\Krishna\Desktop\Test.xlsx
+xlsx.find 1 errormessage ‴Value not found‴
+dialog ‴Value found in the cell: column ♥resultcolumn, row ♥resultrow‴
+
+// To get the value that has been in a cell using the .getvalue command
+xlsx.open C:\Users\Krishna\Desktop\Test.xlsx
+xlsx.getvalue row 1 colname a
+dialog ♥result
+xlsx.close
