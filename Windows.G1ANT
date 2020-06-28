@@ -1,0 +1,36 @@
+addon ui version 4.104.0.0
+addon core version 4.107.0.0
+addon language version 4.106.1.0
+
+program Excel
+window ✱Excel✱ style maximize
+delay 2
+ui.click ‴/ui[@name='Excel']/ui[@id='TitleBar']/ui[@id='Close']‴
+
+delay 1
+ui.click ‴/ui[@name='Taskbar']/ui[@name='Running applications']/ui[@id='Chrome']‴
+
+delay 1
+ui.click ‴/ui[@name='Taskbar']/ui[@name='Running applications']/ui[@id='com.squirrel.slack.slack']‴
+
+delay 1
+ui.click ‴/ui[@name='Taskbar']/ui[@name='Start']‴
+
+delay 1
+ui.click ‴/ui[@name='Taskbar']/ui[@id='4103']‴
+keyboard Calculator
+delay 2
+keyboard ⋘ENTER⋙
+delay 2
+ui.click ‴/ui[@name='Calculator']/descendant::ui[@id='NumberPad']/ui[@id='num4Button']‴
+delay 1
+ui.click ‴/ui[@name='Calculator']/descendant::ui[@id='StandardFunctions']/ui[@id='squareRootButton']‴
+delay 1
+ui.click ‴/ui[@name='Calculator']/descendant::ui[@id='StandardOperators']/ui[@id='plusButton']‴
+delay 1
+ui.click ‴/ui[@name='Calculator']/descendant::ui[@id='NumberPad']/ui[@id='num2Button']‴
+delay 1
+ui.click ‴/ui[@name='Calculator']/descendant::ui[@id='StandardOperators']/ui[@id='equalButton']‴
+ui.click ‴/ui[@name='Calculator']/ui[@id='TitleBar']/ui[@id='Close']‴
+
+ui.click ‴/ui[@name='Taskbar']/ui[@name='Running applications']/ui[@id='com.squirrel.slack.slack']‴
