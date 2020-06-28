@@ -1,0 +1,25 @@
+addon xlsx version 4.104.0.0
+addon watson version 4.103.0.0
+addon core version 4.107.0.0
+addon language version 4.106.1.0
+
+♥var = ‴stop.png‴❚‴speed_limit_upto_40.png‴❚‴school_zone.png‴❚‴no_u_turn.jpg‴❚‴no_left_turn.jpg‴❚‴dead_end.png‴❚‴no_honking.png‴❚‴no_parking.png‴❚‴no_right_turn.png‴❚‴one_way.png‴❚‴warning.png‴❚‴slow.png‴❚‴steep_inclination.png‴
+
+♥assign = ‴STOP‴❚‴SPEED LIMIT UPTO 40‴❚‴SCHOOL ZONE‴❚‴NO U TURN‴❚‴NO LEFT TURN‴❚‴DEAD END‴❚‴NO HONKING‴❚‴NO PARKING‴❚‴NO RIGHT TURN‴❚‴ONE WAY‴❚‴WARNING‴❚‴SLOW‴❚‴STEEP INCLINATION‴
+
+♥apiKey = ♥credential⟦visual_ibm:apikey⟧
+♥serverUri = https://gateway.watsonplatform.net/visual-recognition/api/v3/classify?version=2018-03-19
+xlsx.open C:\Users\Krishna\Desktop\Database.xlsx createifnotexist true
+
+♥ii = 1
+foreach element ♥i in ♥var
+    watson.classifyimage C:\Users\Krishna\Desktop\Traffic_Signs\♥i apikey ♥apiKey serveruri ♥serverUri
+    xlsx.setvalue value ♥result row ♥ii colname a
+    ♥ii = ♥ii+1
+end
+
+♥jj = 1
+foreach element ♥j in ♥assign
+    xlsx.setvalue value ♥j row ♥jj colname b
+    ♥jj = ♥jj+1
+end
