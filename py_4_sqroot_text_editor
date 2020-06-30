@@ -1,0 +1,17 @@
+addon ui version 4.104.0.0
+addon core version 4.107.0.0
+addon language version 4.106.1.0
+
+program Atom
+delay 5
+keyboard ⋘CTRL+N⋙
+keyboard ‴num = float(input('Enter a number: '));‴⋘ENTER⋙‴num_sqrt = num ** 0.5;‴⋘ENTER⋙‴print('The square root of %0.3f is %0.3f'%(num ,num_sqrt));‴
+keyboard ⋘CTRL+SHIFT+S⋙
+delay 1
+keyboard ‴sqroot.py‴⋘ENTER⋙
+
+ui.click ‴/ui[@name='Taskbar']/ui[@id='4103']‴
+keyboard ‴Command Prompt‴⋘ENTER⋙
+delay 2
+keyboard ‴cd Desktop‴⋘ENTER⋙
+keyboard ‴python sqroot.py‴⋘ENTER⋙
