@@ -1,0 +1,17 @@
+addon core version 4.107.0.0
+addon language version 4.106.1.0
+
+program python
+keyboard ‴list=[1,2,3,4,['!','@','#'],'a','b','list']‴⋘ENTER⋙⋘ENTER⋙
+keyboard ‴print('+ - Indexing')‴⋘ENTER⋙
+keyboard ‴print(list[5])‴⋘ENTER⋙
+keyboard ‴print(list[-3])‴⋘ENTER⋙⋘ENTER⋙
+keyboard ‴print('Slicing')‴⋘ENTER⋙
+keyboard ‴print(list[0:4])‴⋘ENTER⋙⋘ENTER⋙
+keyboard ‴print('Append-Extend-Insert')‴⋘ENTER⋙
+keyboard ‴list.append('list1')‴⋘ENTER⋙
+keyboard ‴print(list)‴⋘ENTER⋙⋘ENTER⋙
+keyboard ‴list.extend(['$','%','^'])‴⋘ENTER⋙
+keyboard ‴print(list)‴⋘ENTER⋙⋘ENTER⋙
+keyboard ‴list.insert(4,5)‴⋘ENTER⋙
+keyboard ‴print(list)‴⋘ENTER⋙⋘ENTER⋙
